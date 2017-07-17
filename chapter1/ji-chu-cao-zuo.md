@@ -50,6 +50,23 @@
 ### 6. 删除文件
 
 ```
+    git rm test.txt
+    git commit -m 'delete test.txt'
+```
+
+### 7. git 配置颜色
+
+```
+    git config --global color.ui true
+```
+
+### 8. 配置别名
+
+```
+    // 比如 git status ---> git st
+    git config --global alias.st status
     
+    // lg别名
+    git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
