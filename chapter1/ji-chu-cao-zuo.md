@@ -66,6 +66,11 @@
     // 比如 git status ---> git st
     git config --global alias.st status
     
+    // 常用
+    git config --global alias.co checkout
+    git config --global alias.ci commit
+    git config --global alias.br branch
+    
     // lg别名
     git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
