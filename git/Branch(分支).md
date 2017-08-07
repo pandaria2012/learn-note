@@ -76,8 +76,9 @@
     git push origin local-branch:remote-branch
     // 创建本地和远程对应的分支
     // (两者名称最好一直)
-    git checkout -b branch-name origin/branch-name
-    
+    git checkout -b <branch-name> origin/<branch-name>
+    // 建立本地分支与远程分支的关联
+    git branch --set-upstream <branch-name> origin/<branch-name>
     
 ```
 
