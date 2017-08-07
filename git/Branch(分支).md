@@ -72,8 +72,9 @@
     // 查看远程服务器信息
     git remote -v
     // 将本地分支推送到远程服务器(本地不推送到远程服务器,别人看不到)
-    // 如果失败,可以先 git pull 下
+    // (如果失败可以先 git pull 从服务器上拉取新的提交)
     git push origin local-branch:remote-branch
+    
     
 ```
 
