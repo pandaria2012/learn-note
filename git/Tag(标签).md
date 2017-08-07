@@ -8,6 +8,13 @@
 ### 1. 创建标签
 
 ```
+    // 打在最近一次 commit 上的
+    git tag <tag-name>
+    
+    //打在某个 commit 上的
+    git tag <tag-name> commit_id
+    
+    // 创建带说明的标签: -a <tag-name> -m 'some commit'
     
 ```
 
