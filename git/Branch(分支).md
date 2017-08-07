@@ -44,6 +44,16 @@
     git branch -D <branch-name>
 ```
 
+### 7. 查看合并分支情况
 
+```
+    git log --graph --pretty=oneline --abbrev-commit
+```
+
+### 8. stash
+
+```
+    // 当前工作副本临时保存
+```
 
 
