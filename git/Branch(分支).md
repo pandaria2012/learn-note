@@ -79,7 +79,8 @@
     git checkout -b <branch-name> origin/<branch-name>
     // 建立本地分支与远程分支的关联
     git branch --set-upstream <branch-name> origin/<branch-name>
-    
+    // 从远程分支抓取
+    git pull
 ```
 
 
