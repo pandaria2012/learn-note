@@ -38,6 +38,17 @@
 ### 3. 删除标签
 
 ```
+    // 删除本地标签
+    git tag -d <tag-name>
+    // 推送某个标签到远程服务器
+    git push origin <tag-name>
+    // 推送所有的标签到远程服务器
+    git push origin --tags
     
+    // 删除远程服务器上的某个标签
+    // a. 先删除本地的
+    git tag -d <tag-name>
+    // b. 再删除远程服务器上的某个标签
+    git push origin :refs/tags/<tag-name>
 ```
 
