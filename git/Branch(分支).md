@@ -54,7 +54,26 @@
 
 ```
     // 当前工作副本临时保存
+    git stash
+    // 所有 stash 的工作副本
+    git stash list
+    // 恢复工作副本(并不删除)
+    git stash apply stash@{0}
+    // 删除工作副本
+    git stash grop stash@{0}
+    // 恢复最近一次的工作副本, 并且删除该副本
+    git stash pop
     
+```
+
+### 9. 与远程服务器
+
+```
+    // 查看远程服务器信息
+    git remote -v
+    // 将本地分支推送到远程服务器(本地不推送到远程服务器,别人看不到)
+    // 如果失败,可以先 git pull 下
+    git push origin local-branch:remote-branch
     
 ```
 
