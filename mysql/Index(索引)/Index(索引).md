@@ -28,6 +28,7 @@ mysql 的索引的 **左原则**
 当人们谈论索引是, 并且没有特别的说明, 那么大部分说的就是这个. 主要讨论前 MyISAM 和 InooDB.
 **B-Tree对索引列是顺序组织存储的.** (order by 的时候 就可能会用到所索引来排序,而不是内存排序)
 
+
     ps: 实际上很多存储引擎使用的是 B+Tree, 即每一个叶子节点都包含了一个指向下一个叶子节点的指针,
     方便叶子节点的遍历范围.
     
@@ -40,3 +41,38 @@ mysql 的索引的 **左原则**
 
     * 按照原数据格式进行存储
     * 根据主见引用别索引的行
+    
+**左原则说明**
+
+    1. 如果不是按照索引的最左列开始查找, 则无法使用索引.
+    
+        ex: 
+        
+            index i_user_role (user_id, role_id)
+            select ... where role_id = 100 用不到 i_user_role 索引
+            
+    2. 不能跳过索引中的列
+            
+            ex:
+                index i_user_role_permission (user_id, role_id, permission_id)
+            select ... where user_id = 100 and permission_id = 50
+            只能用到 i_user_role_permission 索引的 user_id 列
+            
+    3. 查询中有某个列的范围查询
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
