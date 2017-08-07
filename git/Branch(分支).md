@@ -15,3 +15,10 @@
 ```
 
 
+### 3. 切换分支
+
+```
+    git checkout <branch-name>
+```
+
+
