@@ -11,7 +11,7 @@
     
 * mysql
     
-    * index
+    * Index(索引)
     
         * [Index(索引)](mysql/Index(索引)/Index(索引).md)
 
