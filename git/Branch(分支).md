@@ -36,4 +36,12 @@
     git merge --no-ff -m 'some comments' dev
 ```
 
-### 6. 
+### 6. 删除分支
+
+```
+    git branch -d <branch-name>
+    // 强行删除一个没有被合并过的分支
+    git branch -D <branch-name>
+```
+
+
