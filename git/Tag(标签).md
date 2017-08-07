@@ -20,6 +20,7 @@
     // 用私钥签名一个标签 -S
     // 签名采用 PGP 签名, 因此, 必须首先安装gpg(GunPG). 
     //如果没有赵高gpg, 或者没有gpg 秘钥对, 就会报错
+    git tag -s v0.1 -m 'signed version 0.2 released' commit_id
     
 ```
 
