@@ -15,6 +15,11 @@
     git tag <tag-name> commit_id
     
     // 创建带说明的标签: -a <tag-name> -m 'some commit'
+    git tag -a v0.1 -m 'version 0.1 released' commit_id
+    
+    // 用私钥签名一个标签 -S
+    // 签名采用 PGP 签名, 因此, 必须首先安装gpg(GunPG). 
+    //如果没有赵高gpg, 或者没有gpg 秘钥对, 就会报错
     
 ```
 
