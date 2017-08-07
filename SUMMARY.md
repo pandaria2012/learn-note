@@ -7,7 +7,8 @@
 
     * [基础操作](git/Git\(基础操作\).md)
 
-    * 
+    * [基础操作](git/Git\(基础操作\).md)
+
     
 * [mysql](mysql.md)
 
