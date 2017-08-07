@@ -6,9 +6,8 @@
 * git
 
     * [基础操作](git/Git\(基础操作\).md)
-
     * [Branch(分支)](git/Branch\(分支\).md)
-
+    * [Branch(分支)](git/Branch\(分支\).md)
     
 * [mysql](mysql.md)
 
