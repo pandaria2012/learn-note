@@ -74,6 +74,9 @@
     // 将本地分支推送到远程服务器(本地不推送到远程服务器,别人看不到)
     // (如果失败可以先 git pull 从服务器上拉取新的提交)
     git push origin local-branch:remote-branch
+    // 创建本地和远程对应的分支
+    // (两者名称最好一直)
+    git checkout -b branch-name origin/branch-name
     
     
 ```
