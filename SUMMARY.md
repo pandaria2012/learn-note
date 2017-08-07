@@ -9,7 +9,7 @@
     * [Branch(分支)](git/Branch\(分支\).md)
     * [Tag(标签)](git/Tag\(标签\).md)
     
-* [mysql](mysql.md)
+* mysql
     
     * index
     
