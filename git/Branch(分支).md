@@ -33,7 +33,7 @@
     // fast forward 合并模式
     git merge <branch-name>
     // 普通合并模式
-    git merge --no-ff -m 'some comment' dev
+    git merge --no-ff -m 'some comments' dev
 ```
 
 ### 6. 
