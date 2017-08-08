@@ -15,5 +15,5 @@
     
         * [Index(索引)](mysql/Index\(索引\)/0.Index\(索引\).md)
         
-        * [Index(索引)](mysql/Index\(索引\)/1.高性能索引.md)
+        * [高性能索引](mysql/Index\(索引\)/1.高性能索引.md)
 
