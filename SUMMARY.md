@@ -15,4 +15,5 @@
 * [Index\(索引\)](mysql/indexsuo-5f1529.md)
   * [Index\(索引\)](mysql/Index%28索引%29/0.Index%28索引%29.md)
   * [高性能索引](mysql/Index%28索引%29/1.高性能索引.md)
+  * [关于索引的其他](mysql/Index%28索引%29/guan-yu-suo-yin-de-qi-ta.md)
 
