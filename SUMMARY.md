@@ -18,4 +18,5 @@
   * [关于索引的其他](mysql/Index%28索引%29/guan-yu-suo-yin-de-qi-ta.md)
 * 查询优化
   * [基础](mysql/ji-chu.md)
+  * [查询缓存](mysql/cha-xun-huan-cun.md)
 
