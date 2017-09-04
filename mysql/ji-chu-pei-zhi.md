@@ -75,6 +75,21 @@ mysql 依然可以通过 log-bin-index 索引文件获取正确的二进制日�
 ```
 
 
+### 清空, 重新开始
+    
+```
+    -- 清空 slave 上相关表 --
+    STOP SLAVE;
+    RESET SLAVE;
+    -- 清空 master 上相关表 --
+    RESET MASTER;
+```
+** RESET MASTER **: 删除所有二进制日志文件并清空二进制日志索引文件.
+** RESET SLAVE **: 删除 slave 复制所用的文件.
+    注意:
+        * 在执行 RESET MASTER 时, 确保没有任何 slave 链接到 master 上.
+        * 在执行 RESET SLAVE 时, 先执行 STOP SLAVE 命令, 确保 slave 上没有活动的复制.
+        
 
 
 
