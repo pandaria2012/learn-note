@@ -19,4 +19,6 @@
 * 查询优化
   * [基础](mysql/ji-chu.md)
   * [查询缓存](mysql/cha-xun-huan-cun.md)
+* 复制\(replication\)
+  * [基础配置](mysql/ji-chu-pei-zhi.md)
 
