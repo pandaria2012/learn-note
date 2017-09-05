@@ -132,22 +132,24 @@ mysql 依然可以通过 log-bin-index 索引文件获取正确的二进制日�
 然后启动 slave 服务, 并配置复制信息.
 
 ```
-    slave > CHANGE MASTER TO 
-    MASTER_HOST = 'master-1', 
-    MASTER_PORT = 3306, 
-    MASTER_USER = 'slave-1',
-    MASTER_PASSWORD = 'xyzzy', 
-    MASTER_LOG_FILE = 'master-bin.000042', 
-    MASTER_LOG_POS = 456552;
+    slave > 
+        CHANGE MASTER TO 
+        MASTER_HOST = 'master-1', 
+        MASTER_PORT = 3306, 
+        MASTER_USER = 'slave-1',
+        MASTER_PASSWORD = 'xyzzy', 
+        MASTER_LOG_FILE = 'master-bin.000042', 
+        MASTER_LOG_POS = 456552;
 ```
 
 开启复制
 
 ```
-        slave > START SLAVE;
+    slave > START SLAVE;
 ```
 
 tips:
+
     mysqldump 命令
     --master-data =  1 / 2:
         = 1: 导出文件里会有 CHANGE MASTER TO ...语句 .
@@ -170,7 +172,7 @@ tips:
 查看当前 slave 的状态
 
 ```
-        slave-1 > SHOW SLAVE STATUS;
+    slave-1 > SHOW SLAVE STATUS;
 ```
 
 拿到当前 slave 同步的 master 的 log file, 和 position. 
@@ -181,19 +183,20 @@ tips:
 在新的 slave 上配置复制信息:
 
 ```
-    slave-2 > CHANGE MASTER TO
-            MASTER_HOST = 'master-1',
-            MASTER_PORT = 3306,
-            MASTER_USER = 'slave-1',
-            MASTER_PASSWORD = 'xyzzy',
-            MASTER_LOG_FILE = 'master-bin.000042',
-            MASTER_LOG_POS = 546632;
+    slave-2 > 
+        CHANGE MASTER TO
+        MASTER_HOST = 'master-1',
+        MASTER_PORT = 3306,
+        MASTER_USER = 'slave-1',
+        MASTER_PASSWORD = 'xyzzy',
+        MASTER_LOG_FILE = 'master-bin.000042',
+        MASTER_LOG_POS = 546632;
 ```
 
 开启复制
 
 ```
-        slave-2 > START SLAVE;
+    slave-2 > START SLAVE;
 ```
 
 
