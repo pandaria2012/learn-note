@@ -1,4 +1,4 @@
-# 配置复制
+# 配置复制 - 全新的开始
 
 ### 配置master
 
@@ -93,10 +93,64 @@ mysql 依然可以通过 log-bin-index 索引文件获取正确的二进制日�
 
 
 
+# 配置复制 -- 中途复制
 
+如果没有开启二进制日志, 先开启二进制日志.
+并给所有表加锁. (数据完整, 防止在备份期间有新数据写入.)
+    master > FLUSH TABLES WITH READ LOCK;
+锁定表后, 找出当前正在使用的二进制日志文件及其binlog位置.
+    master > SHOW MASTER STATUS;
+记录下下一个事件的位置: File: master-bin.000042, Position: 456552 .这就是复制的起点, 
+这个位置点之前的数据都在备份里.
+接下来就是创建备份了.
+    mysqldump --all-databases --host=master-1 > backup.sql
+备份完成后, 释放锁.
+    master > UNLOCK TABLES;
+然后在 slave 上恢复备份的数据.
+    mysql --host=slave-1 < backup.sql
+然后启动 slave 服务, 并配置复制信息.
+    slave > CHANGE MASTER TO 
+    MASTER_HOST = 'master-1', 
+    MASTER_PORT = 3306, 
+    MASTER_USER = 'slave-1',
+    MASTER_PASSWORD = 'xyzzy', 
+    MASTER_LOG_FILE = 'master-bin.000042', 
+    MASTER_LOG_POS = 456552;
+开启复制
+    slave > START SLAVE;
 
+tips:
+    mysqldump 命令
+    --master-data =  1 / 2:
+        = 1: 导出文件里会有 CHANGE MASTER TO ...语句 .
+        = 2: 导出文件里会有 CHANGE MASTER TO ...语句, 但是被写成了一个 SQL 注释, 提供信息.
+        默认值是 1.
+    --single-transaction
+        在开始dump备份的时候开启一个事务, 并设置事务隔离级别为可重复读.
+        但是不影响其他数据的写入更新删除等操作.但是修改表结构的语句不能执行, 
+        如 ALTER TABLE, DROP TABLE 等语句.
+        此参数对支持事务的存储引擎有用.
+    
+# 配置复制 -- 从已有的 slave 上备份数据, 配置新的 slave
 
-
-
+停止 slave
+    slave-1 > STOP SLAVE;
+查看当前 slave 的状态
+    slave-1 > SHOW SLAVE STATUS;
+拿到当前 slave 同步的 master 的 log file, 和 position. 
+    Relay\_Master\_Log\_File: master-bin.000042
+    Exec\_Master\_Log\_Pos: 546632
+备份当前 slave(slave-1) 上的数据.
+在新的 slave(slave-2) 上恢复备份的数据.
+在新的 slave 上配置复制信息:
+    slave-2 > CHANGE MASTER TO
+            MASTER_HOST = 'master-1',
+            MASTER_PORT = 3306,
+            MASTER_USER = 'slave-1',
+            MASTER_PASSWORD = 'xyzzy',
+            MASTER_LOG_FILE = 'master-bin.000042',
+            MASTER_LOG_POS = 546632;
+开启复制
+    slave-2 > START SLAVE;
 
 
