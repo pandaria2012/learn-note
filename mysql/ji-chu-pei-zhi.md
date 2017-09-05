@@ -86,6 +86,7 @@ mysql 依然可以通过 log-bin-index 索引文件获取正确的二进制日�
 ```
 ** RESET MASTER **: 删除所有二进制日志文件并清空二进制日志索引文件.
 ** RESET SLAVE **: 删除 slave 复制所用的文件.
+
     注意:
         * 在执行 RESET MASTER 时, 确保没有任何 slave 链接到 master 上.
         * 在执行 RESET SLAVE 时, 先执行 STOP SLAVE 命令, 确保 slave 上没有活动的复制.
@@ -97,18 +98,40 @@ mysql 依然可以通过 log-bin-index 索引文件获取正确的二进制日�
 
 如果没有开启二进制日志, 先开启二进制日志.
 并给所有表加锁. (数据完整, 防止在备份期间有新数据写入.)
+
+```
     master > FLUSH TABLES WITH READ LOCK;
+```
+
 锁定表后, 找出当前正在使用的二进制日志文件及其binlog位置.
+
+```
     master > SHOW MASTER STATUS;
+```
+
 记录下下一个事件的位置: File: master-bin.000042, Position: 456552 .这就是复制的起点, 
 这个位置点之前的数据都在备份里.
 接下来就是创建备份了.
+
+```
     mysqldump --all-databases --host=master-1 > backup.sql
+```
+
 备份完成后, 释放锁.
+
+```
     master > UNLOCK TABLES;
+```
+
 然后在 slave 上恢复备份的数据.
+
+```
     mysql --host=slave-1 < backup.sql
+```
+
 然后启动 slave 服务, 并配置复制信息.
+
+```
     slave > CHANGE MASTER TO 
     MASTER_HOST = 'master-1', 
     MASTER_PORT = 3306, 
@@ -116,8 +139,13 @@ mysql 依然可以通过 log-bin-index 索引文件获取正确的二进制日�
     MASTER_PASSWORD = 'xyzzy', 
     MASTER_LOG_FILE = 'master-bin.000042', 
     MASTER_LOG_POS = 456552;
+```
+
 开启复制
-    slave > START SLAVE;
+
+```
+        slave > START SLAVE;
+```
 
 tips:
     mysqldump 命令
@@ -134,15 +162,25 @@ tips:
 # 配置复制 -- 从已有的 slave 上备份数据, 配置新的 slave
 
 停止 slave
+
+```
     slave-1 > STOP SLAVE;
+```
+
 查看当前 slave 的状态
-    slave-1 > SHOW SLAVE STATUS;
+
+```
+        slave-1 > SHOW SLAVE STATUS;
+```
+
 拿到当前 slave 同步的 master 的 log file, 和 position. 
     Relay\_Master\_Log\_File: master-bin.000042
     Exec\_Master\_Log\_Pos: 546632
 备份当前 slave(slave-1) 上的数据.
 在新的 slave(slave-2) 上恢复备份的数据.
 在新的 slave 上配置复制信息:
+
+```
     slave-2 > CHANGE MASTER TO
             MASTER_HOST = 'master-1',
             MASTER_PORT = 3306,
@@ -150,7 +188,12 @@ tips:
             MASTER_PASSWORD = 'xyzzy',
             MASTER_LOG_FILE = 'master-bin.000042',
             MASTER_LOG_POS = 546632;
+```
+
 开启复制
-    slave-2 > START SLAVE;
+
+```
+        slave-2 > START SLAVE;
+```
 
 
