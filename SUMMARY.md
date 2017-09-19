@@ -20,7 +20,8 @@
   * [基础](mysql/ji-chu.md)
   * [查询缓存](mysql/cha-xun-huan-cun.md)
 * [复制\(replication\)](mysql/fu-523628-replication.md)
-  * [基础配置](mysql/ji-chu-pei-zhi.md)
+  * [基础配置\(基于语句复制\)](mysql/ji-chu-pei-zhi.md)
+  * [Others](mysql/others.md)
 
 ## Linux
 
