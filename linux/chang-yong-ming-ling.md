@@ -41,7 +41,7 @@ chown
 
 chgrp
 
-passwd
+passwd (/etc/shadow)
 
 cut
 
@@ -57,7 +57,15 @@ useradd
 
 userdel
 
-chage
+chage (/etc/passwd)
+设置或修改用户密码有效期限
+    
+    查看用户信息
+    -l www
+    修改用户账户过期时间
+    -E "2018/01/02" www
+    ...
+    
 
 usermod
 
@@ -71,7 +79,7 @@ visudo
 
 find
 
-groupadd
+groupadd (/etc/group)
 
 groupdel
 

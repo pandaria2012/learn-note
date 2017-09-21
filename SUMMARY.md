@@ -27,4 +27,5 @@
 
 * Elementary
   * [常用命令](linux/chang-yong-ming-ling.md)
+  * [一些文件](linux/yi-xie-wen-jian.md)
 
