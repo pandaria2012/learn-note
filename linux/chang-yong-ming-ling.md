@@ -67,7 +67,7 @@ chage (/etc/passwd)
     ...
     
 
-usermod
+usermod 修改用户信息
 
 id
 
