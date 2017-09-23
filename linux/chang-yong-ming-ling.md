@@ -53,7 +53,7 @@ tail
 
 head
 
-useradd
+useradd （etc/passwd,/etc/shadow /etc/group /etc/gshadow）
 
 userdel
 
