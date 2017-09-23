@@ -55,7 +55,7 @@ head
 
 useradd （etc/passwd,/etc/shadow /etc/group /etc/gshadow）
 
-userdel
+userdel（etc/passwd,/etc/shadow /etc/group /etc/gshadow）
 
 chage (/etc/passwd)
 设置或修改用户密码有效期限
