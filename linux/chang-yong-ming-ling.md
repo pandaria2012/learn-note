@@ -71,6 +71,14 @@ usermod 修改用户信息
 
 id
 
+w
+
+who
+
+last
+
+lastlog
+
 su
 
 sudo
