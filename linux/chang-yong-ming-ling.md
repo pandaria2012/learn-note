@@ -137,7 +137,7 @@
 
 * grpunconv
 
-#### 在登录的用户信息
+#### 在登录的用户
 
 * w
 
@@ -173,10 +173,58 @@
 
 * visudo
 
-echo
 
-cut
+## shell 相关
 
+* echo
+
+* alias
+
+* unalias
+
+* history
+
+* seq 序列
+
+## 多用于管道中
+
+#### 截取
+
+* cut
+
+* grep
+
+#### 排序
+
+* sort
+
+* uniq
+
+* wc
+
+#### 双向重导向
+
+* tee
+
+#### 字符转换
+
+* tr
+
+* col
+
+* join
+
+* paste
+
+* expand
+
+#### 分割
+
+* split
+
+#### 参数替换
+
+* xargs
 
 
 
