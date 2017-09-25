@@ -22,6 +22,8 @@
 * [复制\(replication\)](mysql/fu-523628-replication.md)
   * [基础配置\(基于语句复制\)](mysql/ji-chu-pei-zhi.md)
   * [Others](mysql/others.md)
+* Others
+  * [tips](mysql/tips.md)
 
 ## Linux
 
