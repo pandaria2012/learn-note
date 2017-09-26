@@ -264,7 +264,41 @@
 
 * xargs
 
+## 磁盘相关
 
+* df -hT -i inode
+
+* du
+
+* fdisk 分区
+
+* mkfs 格式化磁盘
+
+* fsck 磁盘检验 (没坏的磁盘一定不要用)
+
+* badblocks  磁盘检验(没坏的磁盘一定不要用)
+
+* mount 挂载
+
+* umount 卸载 -lF 强制卸载
+
+* partprobe 把分区表的修改变化通知内核
+
+* mkswap 格式化 swap 分区
+
+* swapon/swapoff 使用 swap 分区， ex: 是外婆呢、dev/sdb1
+
+* dumpe2fs 查看 ext 文件系统信息
+
+* parted 分区工具 (常用大于2T）
+
+* tune2fs 修改文件系统信息
+
+* megacli 查看 raid xinxi 
+
+* ipmitools 查看硬件信息
+
+* resize2fs 调整文件系统大小 （LVM,drbd）
 
 
 
