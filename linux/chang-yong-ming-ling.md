@@ -275,11 +275,11 @@
 
 * split -l n input_file output_file
 
-
-    # 指定行数
-    -l n input
-    # 指定生成文件后缀行数
-    -a n
+        
+        # 指定行数
+        -l n input
+        # 指定生成文件后缀行数
+        -a n
     ... 
 #### 参数替换
 
