@@ -33,5 +33,5 @@
   * [tips](linux/tips.md)
   * awk
   * sed
-  * vi/vim
+  * [vi/vim](linux/vivim.md)
 
