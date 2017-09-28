@@ -93,6 +93,10 @@
 
 * od
 
+* diff 比较文件或目录
+
+* vimdiff   diff 的加强版 可视化的 diff
+
 ## 目录与文件 权限相关命令
 
 ** 特殊权限 SUID, SGID, SBIT **
@@ -245,12 +249,17 @@
 
 #### 双向重导向
 
-* tee
+* tee   将 input 输出到 output 和 file
+        
+        -a 追加
 
 #### 字符转换
 
-* tr
+* tr   替换字符
 
+        # 文件中的 a--->A   b--->B   c--->C
+        tr 'abc' 'ABC' < test.txt
+        -d 删除 ‘abc’ (上例中)
 * col
 
 * join
