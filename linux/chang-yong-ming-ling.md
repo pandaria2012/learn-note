@@ -234,11 +234,14 @@
 
 #### 排序
 
-* sort
+* sort    sort lines of file 
 
-* uniq
 
-* wc
+        -k2 按照第二列排序（默认空格分隔符分隔列）
+
+* uniq        滤重（默认 相邻的滤重 并非全局的）
+
+* wc 统计文件行数  单词数  字节数  字符数 
 
 #### 双向重导向
 
@@ -252,14 +255,23 @@
 
 * join
 
-* paste
+* paste    merge line of files
+        
+        -d 分隔符
+        -s 行转换成列
 
 * expand
 
-#### 分割
+#### 分割(文件或文件内容)
 
-* split
+* split -l n input_file output_file
 
+
+    # 指定行数
+    -l n input
+    # 指定生成文件后缀行数
+    -a n
+    ... 
 #### 参数替换
 
 * xargs
