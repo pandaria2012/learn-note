@@ -322,6 +322,44 @@
 * resize2fs 调整文件系统大小 （LVM,drbd）
 
 
+## 网络相关
+
+* dig 
+
+        dig @8.8.8.8 www.baidu.com +trace
+
+
+* nslookup
+
+* host baidu.com
+
+* ping
+
+* ifdown eth0 停掉eth0网卡
+
+* ifup eth0 启动eth0网卡
+
+* route -n
+
+* netstat -lntup
+
+* ifconfig 
+
+* ip (centos 7)
+
+* lsof -i:3306
+
+* traceroute -n
+
+* telnet www.baidu.com 80 
+
+* tcpdump
+        
+        tcpdump -n icmp -i eth0
+        
+* nmap
+
+
 
 
 
