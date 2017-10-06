@@ -50,7 +50,7 @@
 
 ### awk数组
 
-        
+        for ( key in array )
 
 ### 格式
 
