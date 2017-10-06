@@ -22,8 +22,8 @@
         awk "$1/^a/{print NR,$1,$NF}" test.txt
         # 匹配 test.txt 文件的第一行的中的 以a开头的所有字段
         
-### 基本的awk执行过程
-
+        $1~/正则开始/,$3~/正则结束/
+        
 
 ### awk常用内置变量
 
@@ -32,6 +32,17 @@
         $NF        最后一个字段
         NR        当前处理的行号
         ORS        输出时候的分隔符
+
+### BEGIN 和 END
+
+        
+        BEGIN 在读取文件之前执行（初始化变量）
+        
+        END 在处理完文件后执行（统计用）
+        
+        awk 'BEGIN{print "hello wolrd!"}'
+        
+        awk '$0END{print "end!"}'
 
 
 ### awk数组
