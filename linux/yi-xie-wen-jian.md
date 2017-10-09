@@ -7,7 +7,6 @@
 
 /etc/default/useradd 文件作用
 
-/proc/partitions 记录分区情况
 /etc/resov.conf
 
 
