@@ -1,7 +1,7 @@
 # docker 下搭建 mysql
 
 
-* /etc/docker/daemon.json
+* /etc/docker/daemon.json   国内镜像加速
 
         {
           "registry-mirrors": ["https://registry.docker-cn.com"]
