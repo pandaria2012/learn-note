@@ -48,3 +48,7 @@
       
     * require-all
       这里如果不配置为 false 的话, 会索引全部的composer包(https://packagist.org/)
+
+### 创建 索引
+
+  php bin/satis build satis.json ./web -v #-v参数可以看到被索引的包
