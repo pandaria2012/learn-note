@@ -1,6 +1,11 @@
 # docker 下搭建 mysql
 
 
+* /etc/docker/daemon.json
+
+        {
+          "registry-mirrors": ["https://registry.docker-cn.com"]
+        }
 
 
 * docker 运行容器命令
