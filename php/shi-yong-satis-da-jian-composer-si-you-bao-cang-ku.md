@@ -53,3 +53,6 @@
 
     php bin/satis build satis.json ./web -v #-v参数可以看到被索引的包
     
+### 定时更新 
+  
+    crontab 执行  创建索引命令 
