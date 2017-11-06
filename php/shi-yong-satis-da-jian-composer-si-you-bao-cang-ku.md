@@ -81,4 +81,15 @@
     // 大功告成 浏览器 访问 
     http://packages.pandamonk.com
     
+### 使用 satis 的 composer 私有包
+
+    Add this Satis repository to your composer.json
+    {
+      "repositories": [{
+        "type": "composer",
+        "url": "http://packages.pandamonk.com"
+      }]
+    }
     
+    composer require pandamonk/hello
+    or composer install
