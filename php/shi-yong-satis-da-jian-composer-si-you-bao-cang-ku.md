@@ -51,4 +51,5 @@
 
 ### 创建 索引
 
-  php bin/satis build satis.json ./web -v #-v参数可以看到被索引的包
+    php bin/satis build satis.json ./web -v #-v参数可以看到被索引的包
+    
