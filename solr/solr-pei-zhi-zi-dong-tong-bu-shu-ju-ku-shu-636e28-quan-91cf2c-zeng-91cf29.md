@@ -60,7 +60,42 @@
         搜索 /UTC/
         改为 Asia/Shanghai
     
+    * 5. 定时脚本修复
     
+        # 在索引之前先清除索引
+        clean=true    
+        # 无论做什么操作  都提交
+        commit=true
+        # 更新那个实体对应 的 配置文件中的 实体
+        entity=t_product
+        # 无论做什么操作 都优化
+        optimize=false
+        # 是否开启 debug
+        debug=false
+        # 是否阻塞所有请求
+        synchronous=false
+           
+        # 增量更新数据
+        http://localhost:8983/solr/collocation1/dataimport?command=delta-import&clean=true&commit=true&wt=json&indent=true&entity=t_product&verbose=false&optimize=false&debug=false&synchronous=false&id=1
+        # 全量跟新数据
+        http://localhost:8983/solr/collocation1/dataimport?command=full-import&clean=true&commit=true&wt=json&indent=true&entity=t_product&verbose=false&optimize=false&debug=false&synchronous=false
+        # 重载配置
+        http://localhost:8983/solr/collocation1/dataimport?command=reload-config
+        # 查看运行的统计状态
+        http://localhost:8983/solr/collocation1/dataimport?command=status
+        # 查看配置
+        http://localhost:8983/solr/collocation1/dataimport?command=show-config
+
+
+
+
+
+
+
+
+
+
+
 
 
     
