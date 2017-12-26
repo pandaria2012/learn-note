@@ -53,8 +53,12 @@
     * 4. 在 ./bin 的 solr.in.sh 内 修改 solr 的默认时区为 PRC, 大约在 60+ 行
     
         # By default the start script uses UTC; override the timezone if needed
-        SOLR_TIMEZONE="PRC"
-
+        SOLR_TIMEZONE="Asia/Shanghai"
+        
+        # 不生效的话 可以修改 ./bin/solr 
+        vim solr
+        搜索 /UTC/
+        改为 Asia/Shanghai
     
     
 
