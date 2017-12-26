@@ -29,6 +29,10 @@
 
 * [tips](mongodb/tips.md)
 
+## solr
+
+* [solr 配置自动同步数据库数据\(全量,增量\)](solr/solr-pei-zhi-zi-dong-tong-bu-shu-ju-ku-shu-636e28-quan-91cf2c-zeng-91cf29.md)
+
 ## Linux
 
 * [Elementary](linux/elementary.md)
