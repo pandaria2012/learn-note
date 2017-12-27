@@ -2,6 +2,7 @@
     
     solr6.3.3
     mysql-connector-java-5.1.45-bin.jar
+    solr 以 jetty 方式部署 (非tomcat)
     
     * 1.将 mysql-connector-java-5.1.45-bin.jar 放到 ./dist下
     
