@@ -43,8 +43,8 @@
         # 同步数据语句 
         query="select id,name,alias_name,old_product_id,top_product_id,type from t_product where status = '1' "
         # 增量同步语句 只去 id 用于 只同步被修改的 根据 ${dataimporter.last_index_time}'
-        # 这里注意时间 update_dt 为int
-        deltaQuery="select id from t_product where update_dt > '${dataimporter.last_index_time}'"
+        # 这里注意时间 update_dt 为int, dataimporter.last_index_time为 timestamp
+        deltaQuery="select id from t_product where FROM_UNIXTIME(update_dt , '%Y-%m-%d %H:%i:%S') > '${dataimporter.last_index_time}'"
         # 拉取 增量同步需要修改的数据
         deltaImportQuery="select id,name,alias_name,old_product_id,top_product_id,type from t_product where id='${dataimporter.delta.id}'"
         # 同步需要删除的数据
