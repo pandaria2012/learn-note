@@ -32,7 +32,7 @@
 ## solr
 
 * [solr 配置自动同步数据库数据\(全量,增量\)](solr/solr-pei-zhi-zi-dong-tong-bu-shu-ju-ku-shu-636e28-quan-91cf2c-zeng-91cf29.md)
-* solr 配置 mmseg4j 分词器
+* [solr 配置 mmseg4j 分词器](solr/solr-pei-zhi-mmseg4j-fen-ci-qi.md)
 
 ## Linux
 
