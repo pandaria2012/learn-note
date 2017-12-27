@@ -77,7 +77,7 @@
         synchronous=false
            
         # 增量更新数据
-        http://localhost:8983/solr/collocation1/dataimport?command=delta-import&clean=true&commit=true&wt=json&indent=true&entity=t_product&verbose=false&optimize=false&debug=false&synchronous=false&id=1
+        http://localhost:8983/solr/collocation1/dataimport?command=delta-import&clean=false&commit=true&wt=json&indent=true&entity=t_product&verbose=false&optimize=false&debug=false&synchronous=false&id=1
         # 全量跟新数据
         http://localhost:8983/solr/collocation1/dataimport?command=full-import&clean=true&commit=true&wt=json&indent=true&entity=t_product&verbose=false&optimize=false&debug=false&synchronous=false
         # 重载配置
@@ -88,6 +88,8 @@
         http://localhost:8983/solr/collocation1/dataimport?command=show-config
 
 
+        tips: 一定要注意改对文件(注意文件位置)
+        ps -aux | grep solr 可以查看 solr 启动的各种配置项.
 
 
 
