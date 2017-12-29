@@ -47,6 +47,7 @@
 ## Docker
 
 * [docker下搭建mysql](docker/dockerxia-da-jian-mysql.md)
+* [docker 下搭建运行 gitlab ](docker/docker-xia-da-jian-yun-xing-gitlab.md)
 
 ## PHP
 
