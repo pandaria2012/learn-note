@@ -42,7 +42,7 @@
 ##### maven 打包 mmseg4j-solr-2.4.0 jar 包
     
     eclipse oxygen
-    java8
+    java8 
     
     # pom.xml 文件
     <properties>
