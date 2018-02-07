@@ -57,3 +57,7 @@
 * [PSR标准相关介绍](php/psrxiang-guan-jie-shao.md)
 * [nginx,多版本php](php/nginxduo-ban-ben-php.md)
 
+## JAVA
+
+* [垃圾回收机制](java/la-ji-hui-shou-ji-zhi.md)
+
