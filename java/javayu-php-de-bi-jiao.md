@@ -14,6 +14,6 @@
             tips:
                 正无穷大 (Double.POSITIVE_INFINITY, Float.POSITIVE_INFINITY)
                 负无穷大 (Double.NEGATIVE_INFINITY, Float.NEGATIVE_INFINITY)
-                NaN (Double.NaN)
+                NaN (Double.NaN, Float.NaN)
                 一个正整数除以0为正无穷大，而 0/0 或者负数的平方根为 NaN；
                 
