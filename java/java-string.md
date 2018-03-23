@@ -114,8 +114,8 @@ int cp = greeting.codePointAt(index);
     从索引0或fromIndex开始计算。如果在原始串中不存在str,返回 -1.
 * int lastIndexOf(String str)
 * int lastIndexOf(String str, int fromIndex)
-* int lastindexOf(int cp)
-* int lastindexOf(int cp, int fromIndex)
+* int lastIndexOf(int cp)
+* int lastIndexOf(int cp, int fromIndex)
     返回与字符串str或代码点cp匹配的最后一个子串的开始位置，这个位置从原始串尾端或fromIndex开始计算。
 ```
 
