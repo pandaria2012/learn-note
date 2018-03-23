@@ -116,8 +116,17 @@ int cp = greeting.codePointAt(index);
 * int lastIndexOf(String str, int fromIndex)
 * int lastIndexOf(int cp)
 * int lastIndexOf(int cp, int fromIndex)
-    返回与字符串str或代码点cp匹配的最后一个子串的开始位置，这个位置从原始串尾端或fromIndex开始计算。
-
+    返回与字符串str或代码点cp匹配的最后一个子串的开始位置，
+    这个位置从原始串尾端或fromIndex开始计算。
+* int length()
+    返回字符串的长度。
+* int codePointCount(int startIndex, int endIndex)
+    返回startIndex 和 endIndex - 1 之间的代码点数量。
+    没有匹配成对的代用字符将计入代码点。
+* String replace(CharSequence oldString, CharSequence newString)
+    返回一个新的字符串。这个字符串用newString代替原始字符串中
+    所有的oldString。可以用String或StringBuilder对象
+    作为CharSequence参数    
 ```
 
 
