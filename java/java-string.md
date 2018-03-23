@@ -126,7 +126,7 @@ int cp = greeting.codePointAt(index);
 * String replace(CharSequence oldString, CharSequence newString)
     返回一个新的字符串。这个字符串用newString代替原始字符串中
     所有的oldString。可以用String或StringBuilder对象
-    作为CharSequence参数    
+    作为CharSequence参数
 ```
 
 
