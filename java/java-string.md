@@ -141,6 +141,7 @@ int cp = greeting.codePointAt(index);
 ```
 
 * 构建字符串（ + 方式效率比较低，耗时浪费空间）
+
 ```
 ** StringBuilder 类 **
 // 创建构建器
