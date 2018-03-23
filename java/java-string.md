@@ -92,10 +92,31 @@ int cp = greeting.codePointAt(index);
 * 字符串API
     
 ```
-* char charAt (int index)
+* char charAt(int index)
     返回给定位置的代码单元。
-* int codePointAt (int index)
+* int codePointAt(int index)
     返回从给定位置开始或结束的代码点。
+* int offsetByCodePoints(int startIndex, int cpCount)
+    返回从 startIndex 代码点开始，位移cpCount后的代码点索引。
+* int compareTo(String other)
+    按照字典顺序，如果字符串位于other之前，返回一个负数；如果字符串位于other之后，返回一个正数；如果两个字符串相等，返回0。
+* boolean endsWith(String suffix)
+    如果字符串以suffix结尾，返回 true。
+* boolean equals(Object other)
+    如果字符串与other相等，返回 true。
+* boolean equalsIgnoreCase(String other)
+    如果字符串与other相等（忽略大小写）,返回true。
+* int indexOf(String str)
+* int indexOf(String str, int fromIndex)
+* int indexOf(int cp)
+* int indexOf(int cp, int fromIndex)
+    返回与字符串str或代码点cp匹配的第一个子串的开始位置。这个位置
+    从索引0或fromIndex开始计算。如果在原始串中不存在str,返回 -1.
+* int lastIndexOf(String str)
+* int lastIndexOf(String str, int fromIndex)
+* int lastindexOf(int cp)
+* int lastindexOf(int cp, int fromIndex)
+    返回与字符串str或代码点cp匹配的最后一个子串的开始位置，这个位置从原始串尾端或fromIndex开始计算。
 ```
 
 
