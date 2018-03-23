@@ -90,7 +90,13 @@ int cp = greeting.codePointAt(index);
 
 
 * 字符串API
-
+    
+```
+* char charAt (int index)
+    返回给定位置的代码单元。
+* int codePointAt (int index)
+    返回从给定位置开始或结束的代码点。
+```
 
 
 
