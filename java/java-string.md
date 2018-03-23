@@ -140,6 +140,34 @@ int cp = greeting.codePointAt(index);
     删除原始字符串头部和尾部的空格。
 ```
 
+* 构建字符串（ + 方式效率比较低，耗时浪费空间）
+```
+** StringBuilder 类 **
+// 创建构建器
+StringBuilder builder = new StringBuilder();
+// 添加内容
+builder.append(ch); // ch = 'a'
+builder.append(str); // str = "bcd"
+// 调用toString方法获得String对象
+String completedString = builder.toString();
+//方法列表
+* int length()
+    返回构建器或缓冲器中的代码单元数量。
+* StringBuilder append(String str)
+    追加一个字符串并返回 this。
+* StringBuilder append(char c)
+    追加一个代码单元并返回this。
+* void setChartAt(int i, char c)
+    将第i个代码单元设置为c
+* StringBuilder insert(int offset, String str)
+    在offset位置插入一个字符串并返回this。
+* StringBuilder insert(int offset, Char c)
+    在offset位置插入一个代码单元并返回this。
+* StringBuilder delete(int startIndex, int endIndex)
+    删除偏移量从startIndex到endIndex-1的代码单元并返回 this。
+* String toString()
+    返回一个与构建器或缓冲器内容相同的字符串。
+```
 
 
 
