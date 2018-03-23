@@ -3,6 +3,7 @@
 * 标准输入输出流
 
 ```
+** 标准输入流 **
 * Scanner类
 // 构造一个 Scanner 并与标准输入流 System.in关联
 Scanner in = new Scanner(System.in);
@@ -41,5 +42,11 @@ char[] passwd = cons.readPassword("Password: ");
     
 // Console API （java.lang.System.Console 1.0）
 * static Console console()
+    对于任何一个通过控制台窗口启动的程序，都可以使用Console对象
+// java.io.Console 6
+* static char[] readPassword(String prompt, Object...args)
+* static String readLine(String prompt, Object...args)
+    显示字符串prompt并且读取用户输入，直到输入行结束。args参数可以用来
+    提供输入格式。
     
 ```
