@@ -102,6 +102,8 @@ int cp = greeting.codePointAt(index);
     按照字典顺序，如果字符串位于other之前，返回一个负数；如果字符串位于other之后，返回一个正数；如果两个字符串相等，返回0。
 * boolean endsWith(String suffix)
     如果字符串以suffix结尾，返回 true。
+* boolean startsWith(String prefix)
+    如果字符串以prefix字符串开始，返回 true。
 * boolean equals(Object other)
     如果字符串与other相等，返回 true。
 * boolean equalsIgnoreCase(String other)
@@ -127,6 +129,15 @@ int cp = greeting.codePointAt(index);
     返回一个新的字符串。这个字符串用newString代替原始字符串中
     所有的oldString。可以用String或StringBuilder对象
     作为CharSequence参数
+* String substring(int beginIndex)
+* String substring(int beginIndex, int endIndex)
+    返回一个新字符串。这个字符串包含原始字符串中从beginIndex
+    到串尾或endIndex-1的所有代码单元
+* String toLowerCase()
+* String toUpperCase()
+    大小写转换
+* String trim()
+    删除原始字符串头部和尾部的空格。
 ```
 
 
