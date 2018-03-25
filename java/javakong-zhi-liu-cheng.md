@@ -44,5 +44,9 @@ else
 break;
 continue;
 label:(跳转点声明)
+
+增强for循环
+for(variable : collection) statement
+collection 必须是一个数组或一个实现Iterable接口的类对象(如ArrayList)。
 其他略。。。
 
