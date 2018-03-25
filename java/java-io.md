@@ -78,6 +78,7 @@ PrintWriter out = new PrintWriter("file.txt");
 tips:
     如果用一个不存在的文件构造一个Scanner，或者用一个不能被创建的文件名构造
     一个PrintWriter，就会发生异常。
+    调用方法声明时加上 FileNotFoundException
 
 * API：
 // java.util.Scanner 5.0
