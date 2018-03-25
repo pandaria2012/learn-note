@@ -30,7 +30,18 @@ b[5] = 12; // 此时 a[5]=12
 // 值传递
 // Arrays.copyTo方法
 int[] b = Arrays.copyOf(a,a.length * 2);
-// 
+// 第一个参数是要拷贝的数组, 第二个参数是新数组的长度。
+// 第二个参数少于被拷贝数组的长度时，截取; 
+// 大于时 按照初始化默认值填充
+```
+
+* 数组排序
+
+```
+* 数值类型排序，Arrays类的sort方法
+    int[] a = new int[1000];
+    ...
+    Arrays.sort(a);// 快速排序
 ```
 
 * tips
@@ -47,4 +58,51 @@ int[] b = Arrays.copyOf(a,a.length * 2);
     运行过程中需要改变扩展数组的大小，可以使用数组列表(array list)
 * 打印数组的值
     可以使用 Arrays.toString(a)返回一个包含数组元素的字符串。
+* 与c++相比，java中的 [] 运算符被定义为检查数组边界;并没有指针运算
+* 命令行参数
+    java Test -a hello world
+    args[0]为 "-a"
+    args[1]为 "hello"
+    args[2]为 "world"
+```
+
+* API
+
+```
+* static String toString(type[] a) 5.0
+    返回包含a中数据元素的字符串，这些元素放在括号内，并用逗号分隔。
+    a: 类型为 int,long,short,char,byte,
+        boolean,float,double的数组。
+* static type copyOf(type[] a, int length) 6
+* static type copyOf(type[] a, int start, int end) 6
+    返回与a类型相同的一个数组，其长度为length或end-start。
+    a: 类型为 int,long,short,char,byte,
+        boolean,float,double的数组。
+    start: 起始下标(包含这个值)。
+    end: 终止下标(不包含这个值)。
+        大于a.length的额外的为相应的默认值。
+    length: 拷贝的数据元素的长度，与end解释相同
+* static void sort(type[] a)
+    采用优化的快速排序算法对数组进行排序。
+    a: 类型为 int,long,short,char,byte,
+        boolean,float,double的数组。
+* static int binarySearch(type[] a, type v)
+* static int binarySearch(type[] a, int start, int end, type v) 5
+    采用二分搜索算法查找v。查找成功，返回对应的下标;
+    否则返回一个负数值r。-r-1 是为保持a有序v应插入的位置。
+    a: 类型为 int,long,short,char,byte,
+        boolean,float,double的有序数组。
+    start: 起始下标(包含这个值)。
+    end: 终止下标(不包含这个值)。
+    v: 同a的数据元素类型相同的值。
+* static void fill(type[] a, type v)
+    将数组的所有数据元素值设置为v
+    a: 类型为 int,long,short,char,byte,
+        boolean,float,double的有序数组。
+    v: 与a数据元素类型相同的一个值。
+* static boolean equals(type[] a, type[] b)
+    如果两个数组大小相同，并且下标相同的元素都相应相等，返回ture。
+    a,b: 类型为 int,long,short,char,byte,
+        boolean,float,double的两个数组。
+
 ```
