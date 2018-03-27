@@ -3,7 +3,7 @@
 ```
 API
 
-java.util.GregorianCalendar 1.1
+** java.util.GregorianCalendar 1.1 **
 * GregorianCalendar()
     构造一个日历对象，用来表示默认地区、默认时区的当前时间。
 * GregorianCalandar(int year, int month, int day)
@@ -47,7 +47,7 @@ java.util.GregorianCalendar 1.1
 * Date getTime()
     获得这个日历对象当前值所表达的时间点。
 
-java.text.DateFormatSymbols 1.1
+** java.text.DateFormatSymbols 1.1 **
 * String[] getShortWeekdays()
 * String[] getShortMonths()
 * String[] getWeekdays()
