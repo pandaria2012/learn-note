@@ -16,6 +16,10 @@ a = new int[] { 17, 19, 23, 29, 31, 37 }
 // 等于与下列方法
 int[] anonymous = { 17, 19, 23, 29, 31, 37 };
 a = anonymous;
+
+
+// 二维数组
+double[][] balances;
 ```
 
 * 数组拷贝
@@ -58,12 +62,15 @@ int[] b = Arrays.copyOf(a,a.length * 2);
     运行过程中需要改变扩展数组的大小，可以使用数组列表(array list)
 * 打印数组的值
     可以使用 Arrays.toString(a)返回一个包含数组元素的字符串。
+    Arrays.deepToString(a),打印多维数组。
 * 与c++相比，java中的 [] 运算符被定义为检查数组边界;并没有指针运算
 * 命令行参数
     java Test -a hello world
     args[0]为 "-a"
     args[1]为 "hello"
     args[2]为 "world"
+* 多维数组
+    数组的值仍为数组，数组的数组。
 ```
 
 * API
