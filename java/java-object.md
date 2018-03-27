@@ -55,3 +55,57 @@ API
     获取当前地区的星期几或月份名称。利用Calendar的星期和月份常量作为数组索引值。
 ```
 
+* tips
+
+```
+* 1. 一个文件中，只能有一个公有类，但是可以有任意数目的非公有类。
+* 2. 类方法中的局部变量不要与类本身的属性命名相同。
+* 3. 每个类方法都有一个隐式参数(第一个参数)
+    someObject.someMethod(p);
+    someMethod方法有一个隐式参数就是 . 前面的 someObject,不出现在方法名后的 () 中。
+    p 是一个显试参数。出现在方法名后的 () 中。
+    方法体中 使用 this 来表示隐式参数。
+* 4. java的方法都定义在类的内部，但是不是所有的方法都是内联方法。
+    是否将某个方法设置为内联方法是jvm的事情，即时编译器会监视调用那些
+    简介、经常被调用、没有被重载、以及可优化的方法。
+* 5. 类的某个属性是一个对象时(或者是一个引用,可变数据域)。在其get方法是要注意。
+    返回该属性的clone对象。而非对对象的引用。
+    return someObject.clone();
+* 6. ** 一个方法可以访问所有类的所有对象的私有数据 **
+    class Employee
+    {
+        ...
+        public boolean equals(Employee other)
+        {
+            return this.name.equals(other.name);
+        }
+    }
+    ...
+    if(someone.equals(boss))...
+    // 既访问了someone 的私有域，同时也访问了boss的私有域
+    // Employee类的方法可以访问Employee类的任何一个对象的私有域。
+* final 修饰的类对象属性
+    可以将实例属性定义final。构建对象时必须初始化这样的属性值。也就是
+    说在一个构造器执行后，这个属性值必须被设置，并且在后续的操作中，
+    不能在对其进行修改。
+    final修饰符大都应用于基本数据类型，或不可变类的域中每个方法都
+    不会改变其对象，这种类就是不可变类。ex: String类
+    注意: 
+        private final Date birthday;
+        birthday变量中的对象的引用在对象构造之后不可变，并不代表
+        birthday对象是一个常量，birthday引用对象调用setTime来更改。
+* 静态域(静态属性, 静态变量)
+    属于类，而不属于任何独立的对象
+* 静态常量
+    静态常量使用的比较多
+    // Math.PI
+    public static final double PI = 3.14159265358979323846;
+    // System.out
+    public static final PrintStream out = ...;
+    虽然都是 public ，但是都被 final 修饰了，所以是没有问题的。
+    不允许在被修改。
+    System.out = new PrintStream(...);// ERROR--out is final
+    // 这里 System 类有一个setOut方法，可以修改System.out。
+    // 因为setOut方法是一个本地方法，不是用java语言实现的，
+    // 可以绕过Java语言的存取控制机制，这是一种特殊的方法。
+```
