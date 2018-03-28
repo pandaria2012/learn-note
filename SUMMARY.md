@@ -59,12 +59,14 @@
 
 ## JAVA
 
-* [java基础](java/java-basic.md)
 * [垃圾回收机制](java/la-ji-hui-shou-ji-zhi.md)
-* [java-String](java/java-string.md)
+* [java-object](java/java-object.md)
+* [basic](java/basic.md)
+  * [basic](java/basic/basic.md)
+* [java基础](java/java-basic.md)
+* [java-basic-Others](java/java-basic-others.md)
 * [java-io](java/java-io.md)
 * [java-控制流程](java/javakong-zhi-liu-cheng.md)
-* [java-basic-Others](java/java-basic-others.md)
+* [java-String](java/java-string.md)
 * [java-array](java/java-array.md)
-* [java-object](java/java-object.md)
 
