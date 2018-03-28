@@ -67,7 +67,6 @@
   * [array](java/basic/array.md)
   * [basic-others](java/basic/basic-others.md)
 * [object](java/object.md)
-  * [basic](java/object.md)
   * [object-basic](java/object-basic.md)
 * [optimize](java/optimize.md)
   * [garbage-collection](java/garbage-collection.md)
