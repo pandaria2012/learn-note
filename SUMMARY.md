@@ -68,6 +68,7 @@
   * [basic-others](java/basic/basic-others.md)
 * [object](java/object.md)
   * [basic](java/object.md)
+  * [others](java/others.md)
 * [optimize](java/optimize.md)
   * [garbage-collection](java/garbage-collection.md)
   * [others](java/others.md)
