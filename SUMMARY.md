@@ -61,10 +61,10 @@
 
 * [basic](java/basic.md)
   * [basic](java/basic/basic.md)
-  * [io](java/basic/io.md)
   * [control-flow](java/basic/control-flow.md)
-  * [String](java/basic/string.md)
+  * [io](java/basic/io.md)
   * [array](java/basic/array.md)
+  * [String](java/basic/string.md)
   * [basic-others](java/basic/basic-others.md)
 * [object](java/object.md)
   * [object-basic](java/object/object-basic.md)
