@@ -68,6 +68,7 @@
   * [basic-others](java/basic/basic-others.md)
 * [object](java/object.md)
   * [object-basic](java/object/object-basic.md)
+  * [inheritance-reflection](java/object/inheritance-reflection.md)
   * [others](java/object/others.md)
 * [optimize](java/optimize.md)
   * [garbage-collection](java/optimize/garbage-collection.md)
