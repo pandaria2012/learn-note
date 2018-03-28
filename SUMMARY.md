@@ -70,4 +70,5 @@
   * [basic](java/object.md)
 * [optimize](java/optimize.md)
   * [garbage-collection](java/garbage-collection.md)
+  * [others](java/others.md)
 
