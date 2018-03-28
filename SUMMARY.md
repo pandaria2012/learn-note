@@ -68,10 +68,6 @@
   * [String](java/basic/string.md)
   * [array](java/basic/array.md)
   * [basic-others](java/basic/basic-others.md)
-* [java-basic-Others](java/java-basic-others.md)
-* [java基础](java/java-basic.md)
-* [java-io](java/java-io.md)
-* [java-控制流程](java/javakong-zhi-liu-cheng.md)
-* [java-String](java/java-string.md)
-* [java-array](java/java-array.md)
+* object
+  * [object](java/object.md)
 
