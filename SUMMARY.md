@@ -59,7 +59,6 @@
 
 ## JAVA
 
-* [垃圾回收机制](java/la-ji-hui-shou-ji-zhi.md)
 * [basic](java/basic.md)
   * [basic](java/basic/basic.md)
   * [io](java/basic/io.md)
