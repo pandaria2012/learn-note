@@ -69,4 +69,6 @@
   * [basic-others](java/basic/basic-others.md)
 * object
   * [object](java/object.md)
+* optimize
+  * [garbage-collection](java/garbage-collection.md)
 
