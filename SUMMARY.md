@@ -66,6 +66,7 @@
   * [io](java/basic/io.md)
   * [control-flow](java/basic/control-flow.md)
   * [String](java/basic/string.md)
+  * [array](java/basic/array.md)
 * [java-basic-Others](java/java-basic-others.md)
 * [java基础](java/java-basic.md)
 * [java-io](java/java-io.md)
