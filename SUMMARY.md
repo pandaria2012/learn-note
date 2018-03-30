@@ -59,18 +59,26 @@
 
 ## JAVA
 
-* [basic](java/basic.md)
-  * [basic](java/basic/basic.md)
-  * [control-flow](java/basic/control-flow.md)
-  * [io](java/basic/io.md)
-  * [array](java/basic/array.md)
-  * [String](java/basic/string.md)
-  * [basic-others](java/basic/basic-others.md)
-* [object](java/object.md)
-  * [object-basic](java/object/object-basic.md)
-  * [inheritance-reflection](java/object/inheritance-reflection.md)
-  * [others](java/object/others.md)
-* [optimize](java/optimize.md)
-  * [garbage-collection](java/optimize/garbage-collection.md)
-  * [others](java/optimize/others.md)
+* 基础
+    - [basic](java/basic/basic.md)
+    - [control-flow](java/basic/control-flow.md)
+    - [io](java/basic/io.md)
+    - [array](java/basic/array.md)
+    - [String](java/basic/string.md)
+    - [basic-others](java/basic/basic-others.md)
+* 面向对象
+    - [object-basic](java/object/object-basic.md)
+    - [继承](java/object/inheritance-reflection.md)
+        + [继承](java/object/inheritance/inheritance.md)
+        + [Object类](java/object/inheritance/object-class.md)
+        + [数组列表](java/object/inheritance/ArrayList.md)
+        + [自动装箱拆箱](java/object/inheritance/wrapping-auto-inout.md)
+        + [可变参数](java/object/inheritance/variable-parameter.md)
+        + [枚举](java/object/inheritance/enumeration.md)
+    - 反射
+        - [反射](java/object/reflection/reflection.md)
+    - [others](java/object/others.md)
+* jvm优化
+    - [garbage-collection](java/optimize/garbage-collection.md)
+    - [others](java/optimize/others.md)
 
