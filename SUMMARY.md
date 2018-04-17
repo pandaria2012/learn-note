@@ -43,6 +43,7 @@
   * [awk](linux/awk.md)
   * [sed](linux/sed.md)
   * [vi/vim](linux/vivim.md)
+  * [GPG(gnupg)](linux/gnupg.md)
 
 ## Docker
 
