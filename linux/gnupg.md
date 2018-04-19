@@ -134,12 +134,18 @@
 #### 加解密(签名验证)前置步骤
 
 ``` php
+    // 在linux中， 在生成key的时候，可以加上 --homedir /path/to/your/project
+    // 然后将此目录的所有者所属组改为相应的值(一般是www:www)
+    // 如果是从别的机器上拿的私钥公钥，要导入到自己的机器上
+    // 并且导入的时候也建议加上 --homedir /path/to/your/project
+    // 并修改相应的权限
+    // gpg --homedir /path/to/your/project --import private-key.txt
+
     // php gnupg 可以使用面向对象和函数式两种方式
 
     // 可选 配置 GNUPGHOME 环境变量，.gnupg 目录的位置
     // 在 new \gnupg()之前(gnupg_init())设置，
     // FPM/FastCGI/Module 模式下的php 需要对此目录有写权限，否则后续都会报错
-    // 当然这个步骤也可以省略 直接指定public_key和private_key
     putenv('GNUPGHOME=/var/www/vhosts/yourdomain/.gnupg');
 
     // 实例化一个 gnupg 对象
@@ -148,10 +154,13 @@
     $gpg->seterrormode(GNUPG_ERROR_EXCEPTION);
     // 设置 签名方式 (签名和原文件分离，一个单独的签名文件或签名字符串)
     $gpg->setsignmode(GNUPG_SIG_MODE_DETACH);
+    
+    // $keyinfo 可以查看所有的生成或导入的 key的信息
+    // 这里需要取出所需要私钥和公钥的fingerprint
+    // 可以写在配置里 也可以从 $keyinfo 数组中取出
+    $keyinfo = $gpg->keyinfo('');
 
-    // 导入私钥来进行签名
-    $private_key = file_get_contents('/path/to/private-key.txt');
-    $private_key_info = $gpg->import($private_key);
+    // 拿到相应的 $private_key_info 来做签名或加密
     // 添加签名key， $res-> 是否成功
     $res = $gpg->addsignkey($private_key_info['fingerprint']);
     // 签名, $sign是签名结果，成功返回签名，失败 try catch错误
@@ -162,6 +171,7 @@
     // 验证签名, $info 签名结果，可以跟private_key_info 中的相应值做比较
     // 看是否有改动 (fingerprint对比)
     $info = $gpg->verify($signed_text,$signature);
+    $info[0]['fingerprint'] == $private_key_info['fingerprint'];
 ```
 
 
