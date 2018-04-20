@@ -54,6 +54,14 @@
         * Constructor[] getDeclaredConstructors() 1.1
         
             返回包含Constructor对象的数组，其中包含了Class对象所描述的类的所有公有构造器(getConstructors)或所有构造器(getDeclaredConstructors)。 
+        
+        * Field getField(String name)
+            
+            返回指定名称的公有域
+
+        * Field getDeclaredField(String name)
+        
+            返回类中声名的给定名称的域
 
     * java.lang.reflect.Constructor 1.1 
         
@@ -110,3 +118,30 @@
         * static boolean isVolatile(int modifiers)
         
             检测方法名中对应的修饰符在modifiers值中的位。
+
+    * java.lang.reflect.AccessibleObject 1.2
+    
+        * void setAccessible(boolean flag)
+        
+            为反射对象设置可访问标志。flag为true表明屏蔽java语言的访问检查，使
+            得对象的私有属性也可以被查询和设置。
+
+        * boolean isAccessible()
+        
+            返回反射对象的可访问标志的值
+
+        * static void setAccessible(AccessibleObject[] array, boolean flag)
+        
+            是一种设置对象数组可访问标志的快捷方法。
+
+    * java.lang.reflect.Field 1.1
+    
+        * Object get(Object obj)
+            
+            返回obj对象中用Field对象表示的域值。
+
+        * void set(Object obj, Object newValue)
+            
+            用一个新值设置Obj对象中Field对象表示的域。
+
+ 
