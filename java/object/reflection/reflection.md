@@ -166,3 +166,11 @@
         * static Object newInstance(Class componentType, int[] lengths)
         
             返回一个具有给定类型、给定维数的新数组。
+    
+    * java.lang.reflect.Method 1.1 
+        
+        * public Object invoke(Object implicitParameter, Object[] explicitParamenters)
+            
+            1. 调用这个对象所描述的方法，传递给定参数，并返回方法的返回值。
+            2. 对于静态方法，将null作为隐式参数传递。在使用包装器传递基本类型
+            的值时，基本类型的返回值必须是未包装的。
